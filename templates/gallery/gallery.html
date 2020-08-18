@@ -1,0 +1,64 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'main_page/style.css' %}">
+
+<body>
+    <div class="top_site">
+        <div class="top_menu">
+            <div class="container_top">
+                <div class="column_1">
+                    <a href="{% url 'Главная' %}" class="menu__links">
+                        <p>О нас</p>
+                    </a>
+                    <a href="{% url 'gallery' %}" class="menu__links">
+                        <p class="padding">Портфолио</p>
+                    </a>
+                    <a href="{% url 'post_index' %}" class="menu__links">
+                        <p class="padding">Блог</p>
+                    </a>
+                </div>
+
+                <a href="tel:+7 (904) 793-03-57" class="menu__links">
+                    <p class="phone">+7 (904) 793-03-57</p>
+                </a>
+            </div>
+        </div>
+    </div>
+<link rel="stylesheet" type="text/css" href="{% static 'gallery/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'node_modules/@staaky/fresco/dist/css/fresco.css' %}">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="{% static 'node_modules/@staaky/fresco/dist/js/fresco.min.js' %}"></script>
+{% if latest_question_list %}
+           <div class="gallery_img">
+    {% for name_file in latest_question_list %}
+        <a href="{% static name_file %}" class="fresco" data-fresco-type="image" data-fresco-group="catalog_image"><img src="{% static name_file %}" alt="{{ name_file }}"></a>
+    {% endfor %}
+       </div>
+{% else %}
+           <p>No polls are available.</p>
+{% endif %}
+
+
+    <!-- подвал => -->
+
+    <footer class="footer">
+
+        <div class="footer_info container footer__padding">
+            <p class="copyright">© 2020 Ремонт в Ниженем Новгороде, Дзержинске, Кстово, Балахне</p>
+            <div class="contact-block">
+                <div class="line social-icons">
+                    <a href="tel:+7 (904) 793-03-57" class="icon_viber"><img class="icon_viber"
+                            src="{% static 'main_page/img/viber_black-min.svg' %}" alt="viber"></a>
+                    <a href="https://vk.com/away.php?to=https%3A%2F%2Finstagram.com%2Fremont_kvartir_kottedgei_nn%3Figshid%3Djfrqet957gq0&cc_key="
+                        target="_blank"><img class="icon" src="{% static 'main_page/img/instagram2-min.svg' %}" alt="Instagram"></a>
+                    <a href="https://vk.com/id64887960" target="_blank"><img class="icon" src="{% static 'main_page/img/vk-min.svg' %}"
+                            alt="ВКонтакте"></a>
+                    <a href="https://vk.com/away.php?to=http%3A%2F%2Fzen.yandex.ru%2Fid%2F5f1895f09877ff4cf5c6e7b0&cc_key="
+                        target="_blank"><img class="icon" margin-top: 1px; height: 30px; src="{% static 'main_page/img/dzen.svg' %}"
+                            alt="dzen"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>

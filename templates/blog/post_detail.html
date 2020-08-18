@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ремонт в Н.Н. и области</title>
+    <link rel="stylesheet" href="{% static 'main_page/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="top_site">
+        <div class="top_menu">
+            <div class="container_top">
+                <div class="column_1">
+                    <a href="{% url 'Главная' %}" class="menu__links">
+                        <p>О нас</p>
+                    </a>
+                    <a href="{% url 'gallery' %}" class="menu__links">
+                        <p class="padding">Портфолио</p>
+                    </a>
+                    <a href="{% url 'post_index' %}" class="menu__links">
+                        <p class="padding">Блог</p>
+                    </a>
+                </div>
+
+                <a href="tel:+7 (904) 793-03-57" class="menu__links">
+                    <p class="phone">+7 (904) 793-03-57</p>
+                </a>
+            </div>
+        </div>
+    </div>
+<h1>{{ posts.title }}</h1>
+<div class="row">
+    <div class="col-md-8">
+        <img src="{% static posts.image.name %}" width="100%">
+    </div>
+    <div class="col-md-4">
+        <h5>About the project:</h5>
+        <p>{{ posts.description }}</p>
+        <br>
+        <h5>Technology used:</h5>
+        <p>{{ posts.technology }}</p>
+    </div>
+</div>
+    <!-- подвал => -->
+
+    <footer class="footer">
+
+        <div class="footer_info container footer__padding">
+            <p class="copyright">© 2020 Ремонт в Ниженем Новгороде, Дзержинске, Кстово, Балахне</p>
+            <div class="contact-block">
+                <div class="line social-icons">
+                    <a href="tel:+7 (904) 793-03-57" class="icon_viber"><img class="icon_viber"
+                            src="{% static 'main_page/img/viber_black-min.svg' %}" alt="viber"></a>
+                    <a href="https://vk.com/away.php?to=https%3A%2F%2Finstagram.com%2Fremont_kvartir_kottedgei_nn%3Figshid%3Djfrqet957gq0&cc_key="
+                        target="_blank"><img class="icon" src="{% static 'main_page/img/instagram2-min.svg' %}" alt="Instagram"></a>
+                    <a href="https://vk.com/id64887960" target="_blank"><img class="icon" src="{% static 'main_page/img/vk-min.svg' %}"
+                            alt="ВКонтакте"></a>
+                    <a href="https://vk.com/away.php?to=http%3A%2F%2Fzen.yandex.ru%2Fid%2F5f1895f09877ff4cf5c6e7b0&cc_key="
+                        target="_blank"><img class="icon" margin-top: 1px; height: 30px; src="{% static 'main_page/img/dzen.svg' %}"
+                            alt="dzen"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

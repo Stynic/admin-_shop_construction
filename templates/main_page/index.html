@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ремонт в Н.Н. и области</title>
+    <link rel="stylesheet" href="{% static 'main_page/style.css' %}">
+</head>
+
+<body>
+
+    <div class="top_site">
+        <div class="top_menu">
+            <div class="container_top">
+                <div class="column_1">
+                    <a class="menu__links">
+                        <p>О нас</p>
+                    </a>
+                    <a href="{% url 'gallery' %}" class="menu__links">
+                        <p class="padding">Портфолио</p>
+                    </a>
+                    <a href="{% url 'post_index' %}" class="menu__links">
+                        <p class="padding">Блог</p>
+                    </a>
+                </div>
+
+                <a href="tel:+7 (904) 793-03-57" class="menu__links">
+                    <p class="phone">+7 (904) 793-03-57</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- контент =>  -->
+    <div class="container background">
+        <div class="container__padding">
+            <div class="container__padding_2">
+                <div class="introduction">
+                    <div class="">
+                        <h3 class="heading-mini">Наши преимущества</h3>
+                        <p class="limited_width">
+                            Здравствуйте. Меня зовут Алексей и я строитель из Нижнего Новгорода. Стаж:
+                            более 14
+                            лет.
+                            В бригаде нас три человека.
+                            Выполняем все виды внутренних работ домов, квартир, офисов, и других
+                            помещений.
+                            Работаем по договору, который заключаем с Вами перед началом ремонта.
+                            Предлагаем свои услуги в Нижнем Новгороде, Дзержинске, Кстово и Балахне.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="list_of_services">
+                    <ul class="lists">
+                        <h3 class="heading-mini">Наши преимущества</h3><br>
+                        <li class="list" style="max-width: 250px;">Бесплатный выезд мастера для составления сметы.</li>
+                        <li class="list">Работа по договору.</li>
+                        <li class="list">Мы всегда на связи.</li>
+                        <li class="list">Работаем без посредников.</li>
+                    </ul>
+                    <div class="">
+                        <h3 class="heading-mini heading-mini_center">Услуги ремонта</h3>
+                        <div class="d2">
+
+                            <ul class="padding_ul">
+
+                                <li class="link_small">Демонтажные работы</li>
+                                <li class="link_small">Укладка плитки</li>
+                                <li class="link_small">Укладка ламината/паркета и т.д.</li>
+                                <li class="link_small">Электромонтажные работы</li>
+                                <li class="link_small">Сантехника</li>
+                                <li class="link_small">Поклейка обоев</li>
+
+                            </ul>
+                            <ul class="padding_ul">
+
+                                <li class="link_small">Выкладка декоративного кирпича</li>
+                                <li class="link_small">Малярные работы</li>
+                                <li class="link_small">Заливка полов и многое другое.</li>
+                                <li class="link_small">Устройство пола</li>
+                                <li class="link_small">Штукатурные работы</li>
+                                <li class="link_small">Установка дверей</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="heading-mini">Варианты ремонта квартир</h3>
+
+            </div>
+
+
+            <div class="card-box">
+
+                <div class="card">
+                    <img class="card_img" src="img/cards_img/card_img0.svg" alt="card 1">
+                    <div class="grey"></div>
+                    <h4 class="heading-mini">Make Your business To Be
+                        Better Famous</h4>
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur
+                        adipisicing.</p>
+                </div>
+
+                <div class="card card_2">
+                    <div class="grey"></div>
+                    <img class="card_img img1" src="img/cards_img/card_img1.svg" alt="card 1">
+                    <h4 class="heading-mini">Bring Technology To Your
+                        Comfrotable Home</h4>
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur
+                        adipisicing.</p>
+                </div>
+
+                <div class="card">
+                    <div class="grey"></div>
+                    <img class="card_img" src="img/cards_img/card_img2.svg" alt="card 3">
+                    <h4 class="heading-mini">Build Your Digital Product
+                        That Suitable</h4>
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur
+                        adipisicing.</p>
+                </div>
+            </div>
+
+            <!-- <h3 class="heading-mini">Наше портфолио</h3> -->
+
+        </div>
+    </div>
+
+    <!-- подвал => -->
+
+    <footer class="footer">
+
+        <div class="footer_info container footer__padding">
+            <p class="copyright">© 2020 Ремонт в Ниженем Новгороде, Дзержинске, Кстово, Балахне</p>
+            <div class="contact-block">
+                <div class="line social-icons">
+                    <a href="tel:+7 (904) 793-03-57" class="icon_viber"><img class="icon_viber"
+                            src="{% static 'main_page/img/viber_black-min.svg' %}" alt="viber"></a>
+                    <a href="https://vk.com/away.php?to=https%3A%2F%2Finstagram.com%2Fremont_kvartir_kottedgei_nn%3Figshid%3Djfrqet957gq0&cc_key="
+                        target="_blank"><img class="icon" src="{% static 'main_page/img/instagram2-min.svg' %}" alt="Instagram"></a>
+                    <a href="https://vk.com/id64887960" target="_blank"><img class="icon" src="{% static 'main_page/img/vk-min.svg' %}"
+                            alt="ВКонтакте"></a>
+                    <a href="https://vk.com/away.php?to=http%3A%2F%2Fzen.yandex.ru%2Fid%2F5f1895f09877ff4cf5c6e7b0&cc_key="
+                        target="_blank"><img class="icon" margin-top: 1px; height: 30px; src="{% static 'main_page/img/dzen.svg' %}"
+                            alt="dzen"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    </div>
+</body>
+
+</html>
+
+</html>
